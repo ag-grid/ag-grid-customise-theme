@@ -1,0 +1,22 @@
+// Customize the look and feel of the grid with Sass variables
+// Up-to-date list of variables is available in the source code: https://github.com/ag-grid/ag-grid/blob/latest/src/styles/theme-fresh.scss 
+$icons-path: "~ag-grid/src/styles/icons/";
+
+// changes the border color
+$border-color: #FF0000;
+
+// Changes the font size
+// $font-size: 12px;
+
+// this changes the font family
+// $font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
+// reverts the biggest change between ag-fresh and ag-theme-fresh
+// $cell-horizontal-padding: 2px;
+
+// changes the icon color
+$icon-color: red;
+
+
+@import '~ag-grid/src/styles/ag-grid.scss';
+@import '~ag-grid/src/styles/ag-theme-fresh.scss';
