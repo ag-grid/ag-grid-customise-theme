@@ -19,15 +19,22 @@ for (var i = 0; i<100; i++) {
 }
 
 var gridOptions = {
+
+    // we do not hide the menu icons, so easier to see any style changes that impact the icons
+    suppressMenuHide: true,
+
     defaultColDef: {
+        // make all cols more narrow
         width: 100,
         filter: 'number'
     },
+
+    // enable these, so they can be demonstrated
     enableSorting: true,
     enableFilter: true,
-    suppressMenuHide: true,
     enableStatusBar: true,
     enableRangeSelection: true,
+
     columnDefs: columnDefs,
     rowData: rowData
 };
