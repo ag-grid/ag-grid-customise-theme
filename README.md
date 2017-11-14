@@ -16,7 +16,6 @@ An up-to-date table with the variable default values and their function is avail
 
 In the original `ag-*` themes, the cells had more compact horizontal padding. This has been changed in the current implementation - you can change that by modifying the `$cell-horizontal-padding` variable value to `4`.
 
-
 ### Change Icon Colors
 
 - To change the colors of the icons used, you can modify the `$icon-color` variable. 
