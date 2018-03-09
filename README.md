@@ -8,7 +8,7 @@ An up-to-date table with the variable default values and their function is avail
 - Clone the project
 - run `npm install`
 - start with `npm start`
-- Examine the `src/styles.scss` file for details
+- Examine the [`src/styles.scss`](src/styles.scss) file for details
 
 ## Common How-Tos
 
