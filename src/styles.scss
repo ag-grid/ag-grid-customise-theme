@@ -1,9 +1,7 @@
 // Customize the look and feel of the grid with Sass variables
 // Up-to-date list of variables is available in the source code: https://github.com/ag-grid/ag-grid/blob/latest/src/styles/theme-fresh.scss
 
-// Temporary, due to bug in 17.0.0. should use only $icons-path:  "~ag-grid/src/styles/material-icons/"
-$icons-path: "~ag-grid/src/styles/icons/";
-$ag-mat-icons-path: "~ag-grid/src/styles/material-icons/";
+$icons-path: "~ag-grid-community/src/styles/balham-icons/";
 
 // changes the border color
 // $border-color: #FF0000;
@@ -18,12 +16,12 @@ $ag-mat-icons-path: "~ag-grid/src/styles/material-icons/";
 // $cell-horizontal-padding: 2px;
 
 // changes the default icon color
-$icon-color: #303f9f;
+$icon-color: #ec44aa;
 // changes the selected checkbox color
 $accent-color: #ffa000;
 
-@import "~ag-grid/src/styles/ag-grid.scss";
-@import "~ag-grid/src/styles/ag-theme-material.scss";
+@import "~ag-grid-community/src/styles/ag-grid.scss";
+@import "~ag-grid-community/src/styles/ag-theme-balham.scss";
 
 // for example purposes, remove margin and padding of the grid
 html,

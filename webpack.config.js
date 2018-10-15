@@ -1,21 +1,19 @@
 // config/webpack.dev.js
-var webpack = require('webpack');
-var path = require('path');
-
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+    mode: 'none',
+    entry: './src/grid.js',
     devtool: 'cheap-module-eval-source-map',
 
-    entry: './src/grid.js',
+    
 
     output: {
         filename: 'bundle.js'
     },
 
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.ts$/,
                 loader: 'ts-loader'
@@ -26,7 +24,7 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                    use: ['style-loader?sourceMap=true', 'css-loader?sourceMap=true', 'sass-loader?sourceMap=true']
+                use: ['style-loader?sourceMap=true', 'css-loader?sourceMap=true', 'sass-loader?sourceMap=true']
             },
             {
                 test: /\.svg$/,

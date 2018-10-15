@@ -1,5 +1,5 @@
 require('./styles.scss');
-var Grid = require('ag-grid').Grid;
+var Grid = require('ag-grid-community').Grid;
 require('ag-grid-enterprise');
 
 // create cols, one for each letter
