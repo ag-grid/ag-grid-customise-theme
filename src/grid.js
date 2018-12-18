@@ -1,18 +1,18 @@
-require('./styles.scss');
+require('./styles/styles.scss');
 var Grid = require('ag-grid-community').Grid;
 require('ag-grid-enterprise');
 
 // create cols, one for each letter
 var columnDefs = [];
-'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').forEach( function(letter) {
-    columnDefs.push({field: letter});
+'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').forEach( function(letter, idx) {
+    columnDefs.push({field: letter, rowDrag: idx === 0 ? true : undefined});
 });
 
 // create 100 rows, and fill with random numbers
 var rowData = [];
 for (var i = 0; i<100; i++) {
     var item = {};
-    columnDefs.forEach( function(colDef) {
+    columnDefs.forEach(function(colDef) {
         item[colDef.field] = Math.floor(Math.random() * 100000);
     });
     rowData.push(item);
@@ -26,7 +26,7 @@ var gridOptions = {
     defaultColDef: {
         // make all cols more narrow
         width: 100,
-        filter: 'number'
+        filter: 'number',
     },
 
     // enable these, so they can be demonstrated
@@ -34,6 +34,9 @@ var gridOptions = {
     enableFilter: true,
     enableStatusBar: true,
     enableRangeSelection: true,
+    rowDragManaged: true,
+    headerHeight: 50,
+    rowHeight: 50,
 
     columnDefs: columnDefs,
     rowData: rowData

@@ -6,8 +6,6 @@ module.exports = {
     entry: './src/grid.js',
     devtool: 'cheap-module-eval-source-map',
 
-    
-
     output: {
         filename: 'bundle.js'
     },

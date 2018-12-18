@@ -1,0 +1,38 @@
+// Customize the look and feel of the grid with Sass variables
+// Up-to-date list of variables is available here: http://www.ag-grid.com/javascript-grid-styling/#customizing-sass-variables
+
+// Fonts from https://fontawesome.com/
+$icons-path: "./icons/";
+
+// changes the default icon color
+$icon-color: #03a9f4;
+
+// changes the icon secondary color (checkbox background)
+$alt-icon-color: #03a9f4;
+
+// changes the selected checkbox check mark color
+$accent-color: #FFFFF1;
+
+$header-height: 50px;
+$row-height: 40px;
+$row-border-width: 1px;
+$hover-color: cornsilk;
+
+$ag-range-selected-color-1: rgb(250, 235, 215);
+$ag-range-selected-color-2: darken($ag-range-selected-color-1, 10%);
+$ag-range-selected-color-3: darken($ag-range-selected-color-1, 20%);
+$ag-range-selected-color-4: darken($ag-range-selected-color-1, 30%);
+
+@import "~ag-grid-community/src/styles/ag-grid.scss";
+@import "~ag-grid-community/src/styles/ag-theme-balham/sass/ag-theme-balham.scss";
+
+// for example purposes, remove margin and padding of the grid and also removing the outline from focused items.
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  *:focus {
+    outline: none;
+  }
+}
