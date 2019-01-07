@@ -1,4 +1,4 @@
-require('./styles/styles.scss');
+require('../styles/styles.scss');
 var Grid = require('ag-grid-community').Grid;
 require('ag-grid-enterprise');
 

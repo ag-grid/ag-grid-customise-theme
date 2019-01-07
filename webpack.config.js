@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'none',
-    entry: './src/grid.js',
+    entry: './src/vanilla/grid.js',
     devtool: 'cheap-module-eval-source-map',
 
     output: {
