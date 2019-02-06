@@ -24,7 +24,7 @@ $ag-range-selected-color-3: darken($ag-range-selected-color-1, 20%);
 $ag-range-selected-color-4: darken($ag-range-selected-color-1, 30%);
 
 @import "~ag-grid-community/src/styles/ag-grid.scss";
-@import "~ag-grid-community/src/styles/ag-theme-balham/sass/ag-theme-balham.scss";
+@import "~ag-grid-community/src/styles/ag-theme-balham.scss";
 
 // for example purposes, remove margin and padding of the grid and also removing the outline from focused items.
 html,
