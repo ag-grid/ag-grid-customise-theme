@@ -16,6 +16,14 @@ Vanilla Javascript
 - Examine the [`styles.scss`](src/vanilla/styles/styles.scss) file for details
 - Access [`http://localhost:8080`](http://localhost:8080)
 
+Vanilla (Replaced all icons with FontAwesome 5)
+
+- Go to src/vanilla-fontawesome
+- run `npm install`
+- start with `npm start`
+- Examine the [`styles.scss`](src/vanilla-fontawesome/styles/styles.scss) file for details
+- Access [`http://localhost:8080`](http://localhost:8080)
+
 Angular
 
 - Go to src/angular
@@ -23,5 +31,3 @@ Angular
 - start with `ng serve`
 - Access [`http://localhost:4200`](http://localhost:4200)
 
-
-Note: This project is using custom icons from https://fontawesome.com/

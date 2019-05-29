@@ -9,6 +9,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.8.2",
         "ag-grid-community": "latest",
         "ag-grid-enterprise": "latest",
         "node-sass": "^4.12.0",
