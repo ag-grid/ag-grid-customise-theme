@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'none',
-    entry: './src/grid.js',
+    entry: './grid.js',
     devtool: 'cheap-module-eval-source-map',
 
     output: {
@@ -22,19 +22,17 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: ['style-loader?sourceMap=true', 'css-loader?sourceMap=true', 'sass-loader?sourceMap=true']
+                use: [
+                    'style-loader?sourceMap=true', 
+                    'css-loader?sourceMap=true',
+                    'resolve-url-loader',
+                    'sass-loader?sourceMap=true'
+                ]
             },
             {
-                test: /\.svg$/,
+                test: /\.(woff|woff2|eot|ttf|svg)$/,
                 use: [
-                    {loader: 'url-loader'},
-                    {
-                        loader: 'svg-colorize-loader',
-                        options: {
-                            color1: '#000000',
-                            color2: '#FFFFFF'
-                        }
-                    }
+                    'url-loader'
                 ]
             }
         ]

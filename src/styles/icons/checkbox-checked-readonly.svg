@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16" width="16" height="16"><defs>
-<path d="M12.18 0.5C14.01 0.5 15.5 1.99 15.5 3.83C15.5 6.16 15.5 9.84 15.5 12.17C15.5 14.01 14.01 15.5 12.18 15.5C9.84 15.5 6.17 15.5 3.83 15.5C1.99 15.5 0.5 14.01 0.5 12.17C0.5 9.84 0.5 6.16 0.5 3.83C0.5 1.99 1.99 0.5 3.83 0.5C6.17 0.5 9.84 0.5 12.18 0.5Z" id="cuRhzp4uZ"></path>
-<path d="M13.24 5.09L6.02 10.91L2.76 6.95" id="jLW7z2db">
-</path>
-</defs>
-<g><g><g><use xlink:href="#cuRhzp4uZ" opacity="1" fill="#BEBEBE" fill-opacity="1"></use>
-</g><g><g><use xlink:href="#jLW7z2db" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="2" stroke-opacity="1"></use></g></g></g></g></svg>
