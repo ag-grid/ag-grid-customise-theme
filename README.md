@@ -24,6 +24,13 @@ Vanilla (Replaced all icons with FontAwesome 5)
 - Examine the [`styles.scss`](src/vanilla-fontawesome/styles/styles.scss) file for details
 - Access [`http://localhost:8080`](http://localhost:8080)
 
+Vanilla (Using SVG Icons)
+- Go to src/vanilla-svg-icons
+- run `npm install`
+- start width `npm start`
+- Examine the [`styles.scss`](src/vanilla-fontawesome/styles/styles.scss) file for details
+- Note: With SVG icons, the color are added directly to the SVG files instead of using SASS variables.
+
 Angular
 
 - Go to src/angular

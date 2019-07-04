@@ -1,0 +1,76 @@
+// Customize the look and feel of the grid with Sass variables
+// Up-to-date list of variables is available here: http://www.ag-grid.com/javascript-grid-styling/#customizing-sass-variables
+
+$header-height: 50px;
+$row-height: 40px;
+$row-border-width: 1px;
+$hover-color: cornsilk;
+
+$ag-range-selected-color-1: rgb(250, 235, 215);
+$ag-range-selected-color-2: darken($ag-range-selected-color-1, 10%);
+$ag-range-selected-color-3: darken($ag-range-selected-color-1, 20%);
+$ag-range-selected-color-4: darken($ag-range-selected-color-1, 30%);
+
+$icons: aggregation, arrows, asc, cancel, chart,
+        checkbox-checked, checkbox-indeterminate,
+        checkbox-unchecked, color-picker, column,
+        columns, contracted, copy, cross, cut, data,
+        desc, expanded, eye-slash, eye, filter, first,
+        grip, group, indeterminate, last, left, loading,
+        maximize, menu, minimize, minus, next, none, 
+        not-allowed, paste, pin, pivot, plus, previous, 
+        radio-button-off, radio-button-on, right, save,
+        small-down, small-left, small-right, small-up, 
+        tick, tree-closed, tree-indeterminate, tree-open;
+
+$icon-path: '../resources/icons/';
+
+@mixin icon-background($path, $icon, $size) {
+    background: url('#{$path}#{$icon}.svg') no-repeat;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: $size $size;
+    height: $size;
+    width: $size;
+}
+
+@import "~ag-grid-community/src/styles/ag-grid.scss";
+@import "~ag-grid-community/src/styles/ag-theme-balham/sass/ag-theme-balham.scss";
+
+.ag-theme-balham {
+  .ag-icon {
+    display: inline-block;
+  }
+
+  @each $icon in $icons {
+    .ag-icon.ag-icon-#{$icon} {
+      @include icon-background($icon-path, $icon, 16px);
+      &:before {
+          content: '' !important;
+      }
+    }
+  }
+
+  .ag-icon.ag-icon-row-drag {
+      @include icon-background($icon-path, 'grip', 16px);
+      &:before {
+        content: '' !important;
+      }
+  }
+  .ag-menu .ag-menu-option-popup-pointer {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+// for example purposes, remove margin and padding of the grid and also removing the outline from focused items.
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  *:focus {
+    outline: none;
+  }
+}
