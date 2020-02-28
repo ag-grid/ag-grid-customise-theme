@@ -1,0 +1,30 @@
+// changes the default icon color
+$ag-icon-color: #0077f9;
+
+// changes the selected checkbox check mark color
+$ag-accent-color: #0077f9;
+
+// we also support older versions of variable names, without the "ag-" prefix.
+// but using the old version may cause Dart Sass to emit deprecation warnings
+// so we suggest you add the "ag-" prefix to all your theme variables.
+$header-height: 50px;
+$row-height: 40px;
+$row-border-width: 1px;
+$hover-color: cornsilk;
+
+$ag-range-selection-background-color: rgba(250, 200, 150, 0.25);
+
+$ag-compatibility-mode: 'legacy';
+
+@import "~ag-grid-community/src/styles/ag-grid.scss";
+@import "~ag-grid-community/src/styles/ag-theme-balham/sass/legacy/ag-theme-balham-v22-compat.scss";
+
+html, body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}

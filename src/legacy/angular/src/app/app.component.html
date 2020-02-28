@@ -1,0 +1,28 @@
+<ag-grid-angular 
+    #agGrid
+    style="width: 100%; height: 100%;" 
+    class="ag-theme-balham"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs"
+    rowSelection="multiple"
+
+    suppressMenuHide="true"
+
+    [defaultColDef]="defaultColDef"
+    enableCharts=true
+    animateRows=true
+    
+    enableSorting=true
+    enableFilter=true
+    enableStatusBar=true
+    enableRangeSelection=true
+    rowDragManaged=true
+    headerHeight="50"
+    rowHeight="40"
+    rowGroupPanelShow="always"
+    pivotPanelShow="always"
+    pivotColumnGroupTotals="before"
+    pivotRowTotals="before"
+    [sideBar]= "sideBar"
+    >
+</ag-grid-angular>

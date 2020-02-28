@@ -15,7 +15,7 @@ var columnDefs = [{
 // create 100 rows, and fill with random numbers
 var rowData = [];
 var countries = ['United Kingdom', 'Ireland', 'United States', 'India', 'Brazil', 'China', 'Russia']; 
-for (var i = 0; i<100; i++) {
+for (var i = 0; i < 100; i++) {
     var item = {};
     item['country'] = countries[i % countries.length];
     for (var j = 1; j < columnDefs.length; j++) {
@@ -69,11 +69,37 @@ var gridOptions = {
                 toolPanel: 'agFiltersToolPanel',
             }
         ],
-        defaultToolPanel: null
+        defaultToolPanel: 'filters'
     },
 
     columnDefs: columnDefs,
     rowData: rowData
 };
 
-new Grid(document.querySelector('#myGrid'), gridOptions);
+
+function initialise() {
+  if (cssHasLoaded("ag-theme-balham")) {
+    new Grid(document.querySelector('#myGrid'), gridOptions);
+  } else {
+    setTimeout(initialise, 100);
+  }
+}
+function cssHasLoaded(theme) {
+  // test if the theme has loaded by looking for the effect of a known style,
+  // in this case we know that the theme applies padding to cells
+  const themeEl = document.createElement("div");
+  document.body.appendChild(themeEl);
+  try {
+    themeEl.className = theme;
+    const cellEl = document.createElement("div");
+    cellEl.className = "ag-cell";
+    themeEl.appendChild(cellEl);
+    const computedStyle = window.getComputedStyle(cellEl);
+    return parseFloat(computedStyle.paddingLeft) > 0;
+  } finally {
+    document.body.removeChild(themeEl);
+  }
+}
+
+initialise();
+

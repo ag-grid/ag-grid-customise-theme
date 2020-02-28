@@ -1,0 +1,52 @@
+// This file demonstrates the v22-v23 theme backwards compatibility layer
+// See https://github.com/ag-grid/ag-grid/blob/latest/grid-packages/ag-grid-docs/migration-guide-22.1-to-23.0.md
+
+// Enable more advanced (and potentially less stable) backwards compatibility.
+// Use "variables" for a more basic backwards compatibility layer.
+$ag-compatibility-mode: "legacy";
+
+// header and row height are examples of variables with equivalent parameters in
+// the new configuration system. These will always work.
+$ag-header-height: 80px;
+$ag-row-height: 50px;
+
+// In v21 and before, variables did not have the `ag-` prefix. These names are supported too.
+$hover-color: rgb(189, 64, 189);
+$header-cell-hover-background-color: rgb(189, 64, 189);
+
+// This variable was removed with no equivalent param, so icons will only be red
+// in "legacy" compatibility mode
+$ag-icon-color: red;
+
+// You can optionally override the automatically generated parameters.
+$ag-theme-override-params: (
+  header-background-color: lightblue,
+  border-color: #999
+);
+
+// ag-grid.scss defines structural styles and should be imported first
+@import "~ag-grid-community/src/styles/ag-grid.scss";
+@import "~ag-grid-community/src/styles/ag-theme-balham/sass/legacy/ag-theme-balham-v22-compat.scss";
+
+.ag-theme-balham {
+  // This is a legacy class name (in v23 it was renamed to ag-group-title-bar)
+  // so this green background will only be visible in "legacy" compatibility mode
+  .ag-group-component-title-bar {
+    background-color: lightgreen;
+  }
+
+  // This is a placeholder selector. These were removed in v23 in favour of
+  // class selectors (in this case, .ag-tab-selected). They will only work
+  // in "legacy" compatibility mode.
+  %selected-tab {
+    background: linear-gradient(lightblue, white);
+    border-bottom: solid 1px white;
+  }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}

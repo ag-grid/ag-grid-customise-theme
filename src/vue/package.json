@@ -1,0 +1,25 @@
+{
+  "name": "custom-vue",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "vue-cli-service serve",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "ag-grid-community": "latest",
+    "ag-grid-enterprise": "latest",
+    "ag-grid-vue": "latest",
+    "core-js": "^3.6.4",
+    "vue": "^2.6.11",
+    "vue-property-decorator": "^8.4.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.2.0",
+    "@vue/cli-service": "~4.2.0",
+    "sass": "^1.25.0",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
