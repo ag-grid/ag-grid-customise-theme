@@ -81,7 +81,7 @@ function makeGridOptions() {
 
 
 function initialise() {
-  if (cssHasLoaded("ag-theme-bootstrap")) {
+  if (cssHasLoaded()) {
     new Grid(document.querySelector('.ag-theme-fresh'), makeGridOptions());
     new Grid(document.querySelector('.ag-theme-dark'), makeGridOptions());
     new Grid(document.querySelector('.ag-theme-blue'), makeGridOptions());
@@ -91,15 +91,20 @@ function initialise() {
     setTimeout(initialise, 100);
   }
 }
-function cssHasLoaded(theme) {
+
+function cssHasLoaded() {
+  const gridEl = document.querySelector("[class^='ag-theme']");
+  if (!gridEl) {
+    return;
+  }
   // test if the theme has loaded by looking for the effect of a known style,
   // in this case we know that the theme applies padding to cells
-  const themeEl = document.createElement("div");
+  const themeEl = document.createElement('div');
   document.body.appendChild(themeEl);
   try {
-    themeEl.className = theme;
-    const cellEl = document.createElement("div");
-    cellEl.className = "ag-cell";
+    themeEl.className = document.querySelector("[class^='ag-theme']").className;
+    const cellEl = document.createElement('div');
+    cellEl.className = 'ag-cell';
     themeEl.appendChild(cellEl);
     const computedStyle = window.getComputedStyle(cellEl);
     return parseFloat(computedStyle.paddingLeft) > 0;
