@@ -73,7 +73,8 @@ var gridOptions = {
     },
 
     columnDefs: columnDefs,
-    rowData: rowData
+    rowData: rowData,
+    enableFillHandle: true
 };
 
 

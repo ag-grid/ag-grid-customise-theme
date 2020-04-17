@@ -10,7 +10,7 @@ var columnDefs = [{
     filter: true,
     width: 200,
     rowDrag: true
-}].concat('ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(letter => ({ field: letter })));
+}].concat('ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(function(letter) { return ({ field: letter }) } ));
 
 // create 100 rows, and fill with random numbers
 var rowData = [];
@@ -86,14 +86,14 @@ function initialise() {
 function cssHasLoaded() {
   // test if the theme has loaded by looking for the effect of a known style,
   // in this case we know that the theme applies padding to cells
-  const themeEl = document.createElement('div');
+  var themeEl = document.createElement('div');
   document.body.appendChild(themeEl);
   try {
     themeEl.className = document.querySelector("[class^='ag-theme']").className;
-    const cellEl = document.createElement('div');
+    var cellEl = document.createElement('div');
     cellEl.className = 'ag-cell';
     themeEl.appendChild(cellEl);
-    const computedStyle = window.getComputedStyle(cellEl);
+    var computedStyle = window.getComputedStyle(cellEl);
     return parseFloat(computedStyle.paddingLeft) > 0;
   } finally {
     document.body.removeChild(themeEl);
