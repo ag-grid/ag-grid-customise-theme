@@ -10,12 +10,13 @@
 @import "~@fortawesome/fontawesome-free/scss/solid";
 @import "~@fortawesome/fontawesome-free/scss/brands";
 
+$gridRowHoverColor: rgb(189, 64, 189);
 
 .ag-theme-balham {
   @include ag-theme-balham((
     header-height: 80px,
     row-height: 50px,
-    row-hover-color: rgb(189, 64, 189),
+    row-hover-color: var(--gridRowHoverColor, #{$gridRowHoverColor}),
     header-background-color: lightblue,
 
     // Use Font Awesome for icons

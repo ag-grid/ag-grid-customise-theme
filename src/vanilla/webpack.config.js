@@ -23,10 +23,20 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [
-                    'style-loader?sourceMap=true', 
-                    'css-loader?sourceMap=true',
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    },
                     'resolve-url-loader',
-                    'sass-loader?sourceMap=true'
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    }
                 ]
             },
             {
