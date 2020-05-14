@@ -10,12 +10,12 @@
       checkbox-checked-color: #2661ad,
       range-selection-border-color: #ff00b1,
       range-selection-background-color: #03305633
-    ))
-  }
+    ));
 
-  .ag-menu-option-active {
-    background-color: #2661ad;
-    color: white;
+    .ag-menu-option-active {
+      background-color: #2661ad;
+      color: white;
+    }
   }
 
   body {

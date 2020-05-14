@@ -11,14 +11,14 @@
     "ag-grid-community": "latest",
     "ag-grid-enterprise": "latest",
     "ag-grid-vue": "latest",
-    "core-js": "^3.6.4",
+    "core-js": "^3.6.5",
     "vue": "^2.6.11",
-    "vue-property-decorator": "^8.4.0"
+    "vue-property-decorator": "^8.4.2"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.2.0",
-    "@vue/cli-service": "~4.2.0",
-    "sass": "^1.25.0",
+    "@vue/cli-plugin-babel": "~4.3.1",
+    "@vue/cli-service": "~4.3.1",
+    "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
   }
