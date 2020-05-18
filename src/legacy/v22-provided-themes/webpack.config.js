@@ -23,7 +23,7 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [
-                    'style-loader?sourceMap=true', 
+                    'style-loader',
                     'css-loader?sourceMap=true',
                     'resolve-url-loader',
                     'sass-loader?sourceMap=true'

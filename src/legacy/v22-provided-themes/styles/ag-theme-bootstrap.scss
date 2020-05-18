@@ -30,6 +30,14 @@
     color: #333;
   }
 
+  .ag-icon-tree-closed::before {
+    content: map-get($ag-theme-base-icons-font-codes, "contracted");
+  }
+
+  .ag-icon-tree-open::before {
+    content: map-get($ag-theme-base-icons-font-codes, "expanded"); 
+  }
+
   .ag-tab {
     border: 1px solid transparent;
     padding: ag-param(grid-size) ag-param(grid-size) * 2;
