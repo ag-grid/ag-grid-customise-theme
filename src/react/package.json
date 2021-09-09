@@ -9,10 +9,10 @@
     "ag-grid-community": "latest",
     "ag-grid-enterprise": "latest",
     "ag-grid-react": "latest",
-    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "sass": "^1.39.0"
   },
   "scripts": {
     "start": "PORT=8080 react-scripts start",
