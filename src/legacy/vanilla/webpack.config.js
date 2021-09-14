@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     mode: 'none',
     entry: './grid.js',
-    devtool: 'cheap-module-eval-source-map',
+    devtool: 'eval-cheap-module-source-map',
 
     output: {
         filename: 'bundle.js'
@@ -23,10 +23,10 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [
-                    'style-loader?sourceMap=true', 
-                    'css-loader?sourceMap=true',
+                    'style-loader', 
+                    'css-loader',
                     'resolve-url-loader',
-                    'sass-loader?sourceMap=true'
+                    'sass-loader'
                 ]
             },
             {

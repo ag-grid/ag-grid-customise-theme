@@ -9,7 +9,7 @@
     "ag-grid-community": "latest",
     "ag-grid-enterprise": "latest",
     "ag-grid-react": "latest",
-    "node-sass": "^4.14.1",
+    "sass": "1.40.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
