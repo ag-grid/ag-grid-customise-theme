@@ -11,6 +11,7 @@ An up-to-date table with the variable default values and their function is avail
   - `src/vanilla`: customising a theme in vanilla JavaScript, including an example of changing the icon font.
   - `src/vanilla-css-variables`: an example of setting color parameters from CSS variables
   - `src/vanilla-extending-base`: an example of a custom theme that directly extends the base theme
+  - `src/vanilla-material-design-icons`: customising the material theme in vanilla JavaScript to use Material Design Icons.
   - `src/vanilla-svg-icons`: an example of using SVG images for icons
   - `src/angular`: Angular CLI example
   - `src/react`: create-react-app example
