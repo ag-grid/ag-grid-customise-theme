@@ -72,6 +72,18 @@ $gridRowHoverColor: rgb(189, 64, 189);
     )
   ));
 
+  .ag-checkbox-input-wrapper::after {
+    content: "\f0c8";
+  }
+
+  .ag-checkbox-input-wrapper.ag-checked::after {
+    content: "\f14a";
+  }
+
+  .ag-checkbox-input-wrapper.ag-indeterminate::after  {
+    content: "\f146";
+  }
+
   // use CSS rules when no theme parameter is available
   .ag-group-title-bar {
     background-color: lightgreen;
