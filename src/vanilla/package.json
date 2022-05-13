@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "run-p sass:build sass:watch serve",
+        "start": "npm-run-all sass:build --parallel sass:watch serve",
         "sass:build": "sass src/styles.scss:src/styles-compiled.css",
         "sass:watch": "npm run sass:build -- --watch",
         "serve": "live-server src --mount=/node_modules:node_modules"
