@@ -14,11 +14,9 @@ var columnDefs = [{
 
 // create 100 rows, and fill with random numbers
 var rowData = [];
-var countries = ['United Kingdom', 'Ireland', 'United States', 'India', 'Brazil', 'China', 'Russia'];
-
+var countries = ['United Kingdom', 'Ireland', 'United States', 'India', 'Brazil', 'China', 'Russia']; 
 for (var i = 0; i < 100; i++) {
     var item = {};
-
     item.country = countries[i % countries.length];
 
     for (var j = 1; j < columnDefs.length; j++) {
@@ -30,7 +28,6 @@ for (var i = 0; i < 100; i++) {
 }
 
 var gridOptions = {
-
     // we do not hide the menu icons, so easier to see any style changes that impact the icons
     suppressMenuHide: true,
 
@@ -44,6 +41,9 @@ var gridOptions = {
     enableCharts: true,
     animateRows: true,
     // enable these, so they can be demonstrated
+    enableSorting: true,
+    enableFilter: true,
+    enableStatusBar: true,
     enableRangeSelection: true,
     rowDragManaged: true,
     headerHeight: 50,
@@ -69,12 +69,11 @@ var gridOptions = {
                 toolPanel: 'agFiltersToolPanel'
             }
         ],
-        defaultToolPanel: 'filters'
+        defaultToolPanel: 'columns'
     },
 
     columnDefs: columnDefs,
-    rowData: rowData,
-    enableFillHandle: true
+    rowData: rowData
 };
 
 function initialise() {

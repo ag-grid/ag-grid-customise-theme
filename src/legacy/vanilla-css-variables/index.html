@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+    <head></head>
+    <body style="display: flex; height: 100%">
+        <div style="width: 400px; display: flex; flex-direction: column;">
+            <h3 style="margin: 0">Set CSS variables</h3>
+            <p style="margin-right: 20px">Click "set" and enter a CSS color value like <code>#F80</code> or <code>hsl(200, 100%, 100%)</code></p>
+            <div id="controls" style="width: 400px; flex: auto; overflow-y: scroll;"></div>
+        </div>
+        <div style="flex: auto; display: flex; flex-direction: column;">
+            <h3 style="margin-top: 0">grid-1 (out-of-the-box Alpine theme, responds to <code>--ag-{parameter-name}</code>)</h3>
+            <div id="grid-1" style="height: 50%; flex: auto" class="ag-theme-alpine"></div>
+            <h3>grid-2 (compiled custom theme, additionally responds to <code>--custom-{parameter-name}</code>)</h3>
+            <div id="grid-2" style="height: 50%; flex: auto; margin-bottom: 20px;" class="ag-theme-custom-vars-as-parameter-values"></div>
+        </div>
+    </body>
+</html>

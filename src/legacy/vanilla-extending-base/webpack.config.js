@@ -36,9 +36,15 @@ module.exports = {
                         options: {
                             sourceMap: true
                         }
-                    }
+                    },
                 ]
             },
+            {
+                test: /\.(woff|woff2|eot|ttf|svg)$/,
+                use: [
+                    'url-loader'
+                ]
+            }
         ]
     },
 
