@@ -2,8 +2,8 @@
 
 @include ag-grid-styles((
   theme: "alpine",
-  // setting this will cause the row highlight color to be automatically
-  // set to a transparent version of the same color
+  // setting this will use color blending to update various other colors just like
+  // the old Sass mixins, eg. the row hover color will be set to a light pink
   alpine-active-color: red,
   header-height: 80px,
   row-height: 60px,
