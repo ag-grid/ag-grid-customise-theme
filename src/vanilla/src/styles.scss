@@ -1,13 +1,16 @@
 @import "../node_modules/@ag-grid-community/styles";
 
 @include ag-grid-styles((
-  theme: "alpine",
+  // include multiple theme files and set specific parameters on each
+  themes: (
+    alpine: (header-background-color: #DA9),
+    alpine-dark: (header-background-color: #642),
+  ),
   // setting this will use color blending to update various other colors just like
   // the old Sass mixins, eg. the row hover color will be set to a light pink
   alpine-active-color: red,
   header-height: 80px,
   row-height: 60px,
-  header-background-color: lightblue,
 ));
 
 .ag-group-title-bar {
