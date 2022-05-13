@@ -1,0 +1,22 @@
+@import "../node_modules/@ag-grid-community/styles/main";
+
+@include ag-grid-styles((
+  theme: "alpine",
+  // setting this will cause the row highlight color to be automatically
+  // set to a transparent version of the same color
+  alpine-active-color: red,
+  header-height: 80px,
+  row-height: 60px,
+  header-background-color: lightblue,
+));
+
+.ag-group-title-bar {
+  background-color: lightgreen;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}

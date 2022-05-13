@@ -1,6 +1,3 @@
-require('./styles/styles.scss');
-var Grid = require('ag-grid-community').Grid;
-require('ag-grid-enterprise');
 
 // create cols, one for each letter
 var columnDefs = [{
@@ -30,7 +27,6 @@ for (var i = 0; i < 100; i++) {
 }
 
 var gridOptions = {
-
     // we do not hide the menu icons, so easier to see any style changes that impact the icons
     suppressMenuHide: true,
 
@@ -46,8 +42,6 @@ var gridOptions = {
     // enable these, so they can be demonstrated
     enableRangeSelection: true,
     rowDragManaged: true,
-    headerHeight: 50,
-    rowHeight: 40,
     rowGroupPanelShow: 'always',
     pivotPanelShow: 'always',
     pivotColumnGroupTotals: 'before',
@@ -79,7 +73,7 @@ var gridOptions = {
 
 function initialise() {
     if (cssHasLoaded()) {
-        new Grid(document.querySelector('#myGrid'), gridOptions);
+        new agGrid.Grid(document.querySelector('#myGrid'), gridOptions);
     } else {
         setTimeout(initialise, 100);
     }
