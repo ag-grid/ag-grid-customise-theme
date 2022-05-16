@@ -1,6 +1,6 @@
-@import "../node_modules/@ag-grid-community/styles";
+@use "../node_modules/@ag-grid-community/styles" as ag;
 
-@include ag-grid-styles((
+@include ag.grid-styles((
   // include multiple theme files and set specific parameters on each
   themes: (
     alpine: (header-background-color: #DA9),
