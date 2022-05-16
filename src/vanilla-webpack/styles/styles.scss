@@ -1,0 +1,102 @@
+
+
+// ag-grid.scss defines structural styles and should be imported first
+@use "~@ag-grid-community/styles" as ag;
+// @use "../node_modules/@ag-grid-community/styles" as ag;
+
+// Fonts from https://fontawesome.com/
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
+$gridRowHoverColor: rgb(189, 64, 189);
+
+@include ag.grid-styles((
+  theme: "balham",
+  header-height: 80px,
+  row-height: 50px,
+  row-hover-color: var(--gridRowHoverColor, #{$gridRowHoverColor}),
+  header-background-color: lightblue,
+
+  // Use Font Awesome for icons
+  icon-font-family: "Font Awesome 5 Free",
+  // The @imports above embed the Font Awesome data, so set icons-data to null to avoid
+  // the theme's default font from being embedded too
+  icons-data: null,
+  // Map ag-Grid icon names to Font Awesome character codes
+  icons-font-codes: (
+      "aggregation": "\f247",
+      "arrows": "\f0b2",
+      "asc": "\f062",
+      "cancel": "\f057",
+      "chart": "\f080",
+      "color-picker": "\f576",
+      "columns": "\f0db",
+      "contracted": "\f146",
+      "copy": "\f0c5",
+      "cross": "\f00d",
+      "desc": "\f063",
+      "expanded": "\f0fe",
+      "eye-slash": "\f070",
+      "eye": "\f06e",
+      "filter": "\f0b0",
+      "first": "\f100",
+      "grip": "\f58e",
+      "group": "\f5fd",
+      "last": "\f101",
+      "left": "\f060",
+      "linked": "\f0c1",
+      "loading": "\f110",
+      "maximize": "\f2d0",
+      "menu": "\f0c9",
+      "minimize": "\f2d1",
+      "next": "\f105",
+      "none": "\f338",
+      "not-allowed": "\f05e",
+      "paste": "\f0ea",
+      "pin": "\f276",
+      "pivot": "\f074",
+      "previous": "\f104",
+      "right": "\f061",
+      "save": "\f0c7",
+      "small-down": "\f107",
+      "small-left": "\f104",
+      "small-right": "\f105",
+      "small-up": "\f106",
+      "tick": "\f00c",
+      "tree-closed": "\f105",
+      "tree-indeterminate": "\f068",
+      "tree-open": "\f107",
+      "unlinked": "\f127",
+  )
+));
+
+.ag-checkbox-input-wrapper::after {
+  content: "\f0c8";
+}
+
+.ag-checkbox-input-wrapper.ag-checked::after {
+  content: "\f14a";
+}
+
+.ag-checkbox-input-wrapper.ag-indeterminate::after  {
+  content: "\f146";
+}
+
+// use CSS rules when no theme parameter is available
+.ag-group-title-bar {
+  background-color: lightgreen;
+}
+
+.ag-icon {
+  // required because Font Awesome uses bold glyphs for its icons
+  font-weight: bold;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
