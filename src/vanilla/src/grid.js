@@ -7,7 +7,9 @@ var columnDefs = [{
     filter: true,
     width: 200,
     rowDrag: true
-}].concat('ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(letter => ({ field: letter })));
+}].concat('ABCDEFG'.split('').map(letter => ({ field: letter })));
+
+columnDefs[0].checkboxSelection = true;
 
 // create 100 rows, and fill with random numbers
 var rowData = [];
@@ -68,7 +70,8 @@ var gridOptions = {
 
     columnDefs: columnDefs,
     rowData: rowData,
-    enableFillHandle: true
+    enableFillHandle: true,
+    rowSelection: 'single'
 };
 
 function initialise() {

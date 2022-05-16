@@ -1,5 +1,7 @@
 @use "../node_modules/@ag-grid-community/styles" as ag;
 
+@use "sass:meta";
+
 @include ag.grid-styles((
   // include multiple theme files and set specific parameters on each
   themes: (
@@ -11,6 +13,9 @@
   alpine-active-color: red,
   header-height: 80px,
   row-height: 60px,
+  // Uncomment this to remove all native widget styling from the grid. This is
+  // useful if you want to make your own styles starting from a blank slate.
+  // suppress-native-widget-styling: "true"
 ));
 
 .ag-group-title-bar {
@@ -23,3 +28,4 @@ body {
   padding: 0;
   height: 100%;
 }
+
