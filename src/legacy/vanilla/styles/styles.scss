@@ -88,11 +88,6 @@ $gridRowHoverColor: rgb(189, 64, 189);
   .ag-group-title-bar {
     background-color: lightgreen;
   }
-
-  .ag-icon {
-    // required because Font Awesome uses bold glyphs for its icons
-    font-weight: bold;
-  }
 }
 
 html,

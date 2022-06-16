@@ -4,14 +4,15 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "npm-run-all sass:build --parallel sass:watch serve",
-        "sass:build": "sass src/styles.scss:src/styles-compiled.css",
+        "start": "npm run sass:build; npm-run-all --parallel sass:watch serve",
+        "sass:build": "sass --load-path node_modules src/styles.scss:src/styles-compiled.css",
         "sass:watch": "npm run sass:build -- --watch",
         "serve": "live-server src --mount=/node_modules:node_modules"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@fortawesome/fontawesome-free": "^6.1.1",
         "live-server": "^1.2.2",
         "npm-run-all": "^4.1.5",
         "sass": "^1.51.0"

@@ -1,23 +1,79 @@
-@use "../node_modules/@ag-grid-community/styles" as ag;
-
-@use "sass:meta";
+// this import works because the sass compiler is invoked with `--load-path node_modules`
+@use "@ag-grid-community/styles" as ag;
 
 @include ag.grid-styles((
   // include multiple theme files and set specific parameters on each
   themes: (
-    alpine: (header-background-color: #DA9),
-    alpine-dark: (header-background-color: #642),
+    alpine: (
+      header-background-color: #DA9,
+      output-class-name: ag-theme-custom,
+    ),
+    alpine-dark: (
+      header-background-color: #642,
+      output-class-name: ag-theme-custom-dark,
+    )
   ),
-  // setting this will use color blending to update various other colors just like
-  // the old Sass mixins, eg. the row hover color will be set to a light pink
-  alpine-active-color: red,
+
+  // setting properties here will apply to all themes
   header-height: 80px,
   row-height: 60px,
+
+  // setting the active color will use color blending to update various
+  // other colors eg. the row hover color will be set to a light pink
+  alpine-active-color: red,
+
+  // Uncomment these lines to replace the icons with fontawesome icons
+  // icon-font-family: "Font Awesome 5 Free",
+  // icon-font-code-aggregation: "\f247",
+  // icon-font-code-arrows: "\f0b2",
+  // icon-font-code-asc: "\f062",
+  // icon-font-code-cancel: "\f057",
+  // icon-font-code-chart: "\f080",
+  // icon-font-code-color-picker: "\f576",
+  // icon-font-code-columns: "\f0db",
+  // icon-font-code-contracted: "\f146",
+  // icon-font-code-copy: "\f0c5",
+  // icon-font-code-cross: "\f00d",
+  // icon-font-code-desc: "\f063",
+  // icon-font-code-expanded: "\f0fe",
+  // icon-font-code-eye-slash: "\f070",
+  // icon-font-code-eye: "\f06e",
+  // icon-font-code-filter: "\f0b0",
+  // icon-font-code-first: "\f100",
+  // icon-font-code-grip: "\f58e",
+  // icon-font-code-group: "\f5fd",
+  // icon-font-code-last: "\f101",
+  // icon-font-code-left: "\f060",
+  // icon-font-code-linked: "\f0c1",
+  // icon-font-code-loading: "\f110",
+  // icon-font-code-maximize: "\f2d0",
+  // icon-font-code-menu: "\f0c9",
+  // icon-font-code-minimize: "\f2d1",
+  // icon-font-code-next: "\f105",
+  // icon-font-code-none: "\f338",
+  // icon-font-code-not-allowed: "\f05e",
+  // icon-font-code-paste: "\f0ea",
+  // icon-font-code-pin: "\f276",
+  // icon-font-code-pivot: "\f074",
+  // icon-font-code-previous: "\f104",
+  // icon-font-code-right: "\f061",
+  // icon-font-code-save: "\f0c7",
+  // icon-font-code-small-down: "\f107",
+  // icon-font-code-small-left: "\f104",
+  // icon-font-code-small-right: "\f105",
+  // icon-font-code-small-up: "\f106",
+  // icon-font-code-tick: "\f00c",
+  // icon-font-code-tree-closed: "\f105",
+  // icon-font-code-tree-indeterminate: "\f068",
+  // icon-font-code-tree-open: "\f107",
+  // icon-font-code-unlinked: "\f127",
+
   // Uncomment this to remove all native widget styling from the grid. This is
   // useful if you want to make your own styles starting from a blank slate.
   // suppress-native-widget-styling: "true"
 ));
 
+// More kinds of customisation can be made with CSS rules
 .ag-group-title-bar {
   background-color: lightgreen;
 }
@@ -28,4 +84,3 @@ body {
   padding: 0;
   height: 100%;
 }
-

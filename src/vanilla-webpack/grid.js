@@ -46,8 +46,6 @@ var gridOptions = {
     // enable these, so they can be demonstrated
     enableRangeSelection: true,
     rowDragManaged: true,
-    headerHeight: 50,
-    rowHeight: 40,
     rowGroupPanelShow: 'always',
     pivotPanelShow: 'always',
     pivotColumnGroupTotals: 'before',
