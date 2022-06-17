@@ -6,7 +6,7 @@
   themes: (
     custom: (
       header-background-color: rgb(234, 191, 177),
-      extend-theme: alpine
+      extend-theme: alpine,
     ),
     custom-dark: (
       header-background-color: rgb(72, 44, 17),
@@ -18,7 +18,6 @@
 
   // setting properties here will apply to all themes
   header-height: 80px,
-  row-height: 60px,
 
   // setting the active color will use color blending to update various
   // other colors eg. the row hover color will be set to a light pink
