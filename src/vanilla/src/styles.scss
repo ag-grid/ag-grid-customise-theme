@@ -6,15 +6,15 @@
   themes: (
     custom: (
       header-background-color: rgb(234, 191, 177),
-      extend-theme: alpine,
+      extend-theme: alpine
     ),
     custom-dark: (
       header-background-color: rgb(72, 44, 17),
       extend-theme: alpine-dark,
+      // just to mix things up, let's give the dark theme a different icon set
       icon-font-family: "agGridMaterial",
     )
   ),
-
 
   // setting properties here will apply to all themes
   header-height: 80px,
