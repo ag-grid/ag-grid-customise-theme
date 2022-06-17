@@ -4,15 +4,17 @@
 @include ag.grid-styles((
   // include multiple theme files and set specific parameters on each
   themes: (
-    alpine: (
-      header-background-color: #DA9,
-      output-class-name: ag-theme-custom,
+    custom: (
+      header-background-color: rgb(234, 191, 177),
+      extend-theme: alpine,
     ),
-    alpine-dark: (
-      header-background-color: #642,
-      output-class-name: ag-theme-custom-dark,
+    custom-dark: (
+      header-background-color: rgb(72, 44, 17),
+      extend-theme: alpine-dark,
+      icon-font-family: "agGridMaterial",
     )
   ),
+
 
   // setting properties here will apply to all themes
   header-height: 80px,
@@ -74,8 +76,14 @@
 ));
 
 // More kinds of customisation can be made with CSS rules
-.ag-group-title-bar {
-  background-color: lightgreen;
+.ag-header-cell {
+  font-style: italic;
+}
+.ag-theme-custom .ag-group-title-bar {
+  background-color: #defade;
+}
+.ag-theme-custom-dark .ag-group-title-bar {
+  background-color: #0f630f;
 }
 
 html,
