@@ -1,7 +1,43 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
+    <head>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"/>
+        <script>
+            function setDarkMode(on) {
+                if (on) {
+                    document.body.classList.add("dark");
+                    document.getElementById("myGrid").className = "ag-theme-custom-dark";
+                } else {
+                    document.body.classList.remove("dark");
+                    document.getElementById("myGrid").className = "ag-theme-custom";
+                }
+            }
+        </script>
+        <style>
+            #controls {
+                height: 50px;
+                line-height: 50px;
+                padding-left: 20px;
+                user-select: none;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+            }
+            .dark #controls {
+                background: #000;
+                color: #fff;
+            }
+            #myGrid {
+                height: calc(100% - 50px);
+            }
+        </style>
+    </head>
     <body>
-        <div id="myGrid" style="height: 100%;" class="ag-theme-material"></div>
+        <div id="controls">
+            <label>
+                <input type="checkbox" onchange="setDarkMode(event.currentTarget.checked)">
+                Dark Mode
+            </label>
+        </div>
+        <div id="myGrid" class="ag-theme-custom"></div>
     </body>
 </html>
