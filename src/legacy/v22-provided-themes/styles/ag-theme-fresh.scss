@@ -3,7 +3,7 @@
 
 // ag-grid.scss defines structural styles and should be imported first
 @import '~ag-grid-community/src/styles/ag-grid.scss';
-@import '~ag-grid-community/src/styles/ag-theme-base/sass/ag-theme-base.scss';
+@import '~ag-grid-community/src/styles/ag-theme-base/sass/ag-theme-base-mixin.scss';
 
 .ag-theme-fresh {
   @include ag-theme-base((
