@@ -1,0 +1,50 @@
+{
+  "name": "custom-theme",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve --port=8080",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "13.1.1",
+    "@angular/common": "13.1.1",
+    "@angular/compiler": "13.1.1",
+    "@angular/core": "13.1.1",
+    "@angular/forms": "13.1.1",
+    "@angular/platform-browser": "13.1.1",
+    "@angular/platform-browser-dynamic": "13.1.1",
+    "@angular/router": "13.1.1",
+    "ag-grid-angular": "latest",
+    "ag-grid-community": "latest",
+    "ag-grid-enterprise": "latest",
+    "rxjs": "7.5.1",
+    "tslib": "2.3.1",
+    "zone.js": "0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "13.1.2",
+    "@angular/cli": "13.1.2",
+    "@angular/compiler-cli": "13.1.1",
+    "@angular/language-service": "13.1.1",
+    "@types/jasmine": "3.10.3",
+    "@types/jasminewd2": "2.0.10",
+    "@types/node": "17.0.7",
+    "codelyzer": "6.0.2",
+    "jasmine-core": "4.0.0",
+    "jasmine-spec-reporter": "7.0.0",
+    "karma": "6.3.9",
+    "karma-chrome-launcher": "3.1.0",
+    "karma-coverage-istanbul-reporter": "3.0.3",
+    "karma-jasmine": "4.0.1",
+    "karma-jasmine-html-reporter": "1.7.0",
+    "protractor": "7.0.0",
+    "ts-node": "10.4.0",
+    "tslint": "6.1.3",
+    "typescript": "4.5.4"
+  }
+}

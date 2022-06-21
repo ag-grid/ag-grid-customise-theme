@@ -1,4 +1,4 @@
-# ag-Grid Theme Legacy React example
+# ag-Grid Legacy Theme React example
 
 <p>This project demonstrates how to create a custom theme in an create-react-app project using the legacy Sass API that will be removed in v29.</p>
 
