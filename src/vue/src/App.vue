@@ -1,21 +1,21 @@
 <style lang="scss">
-  @import "../node_modules/ag-grid-community/src/styles/ag-grid.scss";
-  @import "../node_modules/ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine-mixin.scss";
+  @use "../node_modules/ag-grid-community/styles" as ag;
 
-  .ag-theme-custom-vue {
-    @include ag-theme-alpine((
-      odd-row-background-color: #f5f5f5,
-      row-border-color: transparent,
-      row-hover-color: null,
-      checkbox-checked-color: #2661ad,
-      range-selection-border-color: #ff00b1,
-      range-selection-background-color: #03305633
-    ));
+  @include ag.grid-styles((
+    theme: custom-vue,
+    extend-theme: alpine,
 
-    .ag-menu-option-active {
-      background-color: #2661ad;
-      color: white;
-    }
+    odd-row-background-color: #f5f5f5,
+    row-border-color: transparent,
+    row-hover-color: rgba(128, 255, 128, 0.1),
+    checkbox-checked-color: #2661ad,
+    range-selection-border-color: #ff00b1,
+    range-selection-background-color: #03305633
+  ));
+
+  .ag-menu-option-active {
+    background-color: #2661ad;
+    color: white;
   }
 
   body {

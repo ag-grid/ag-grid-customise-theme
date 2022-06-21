@@ -1,4 +1,6 @@
-@use "~@ag-grid-community/styles" as ag;
+// This import works because sass-loader treats the `~` character as in
+// instruction to look within node_modules
+@use "~ag-grid-community/styles" as ag;
 
 @include ag.grid-styles((
   // include multiple theme files and set specific parameters on each

@@ -13,6 +13,8 @@
     "license": "ISC",
     "dependencies": {
         "@fortawesome/fontawesome-free": "^6.1.1",
+        "ag-grid-community": "latest",
+        "ag-grid-enterprise": "latest",
         "live-server": "^1.2.2",
         "npm-run-all": "^4.1.5",
         "sass": "^1.51.0"
