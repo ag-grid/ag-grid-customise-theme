@@ -1,4 +1,4 @@
-# ag-Grid Sass styling API Webpack Example
+# ag-Grid Sass Styling API Webpack Example
 
 <p>This project demonstrates the Sass styling API using Webpack and sass-loader.</p>
 

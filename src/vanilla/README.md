@@ -1,4 +1,4 @@
-# ag-Grid Sass styling API Example
+# ag-Grid Sass Styling API Example
 
 <p>This project demonstrates the Sass styling API using the Sass command line tool to compile Sass to CSS.</p>
 
