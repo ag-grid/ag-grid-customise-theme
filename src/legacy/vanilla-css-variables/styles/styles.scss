@@ -1,0 +1,64 @@
+@import '~ag-grid-community/dist/styles/ag-theme-alpine.css';
+
+
+// ag-grid.scss defines structural styles and should be imported first
+@import '~ag-grid-community/src/styles/ag-grid.scss';
+@import '~ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine-mixin.scss';
+
+.ag-theme-custom-vars-as-parameter-values {
+  @include ag-theme-alpine(
+    (
+      foreground-color: var(--custom-foreground-color),
+      data-color: var(--custom-data-color),
+      secondary-foreground-color: var(--custom-secondary-foreground-color),
+      header-foreground-color: var(--custom-header-foreground-color),
+      disabled-foreground-color: var(--custom-disabled-foreground-color),
+      background-color: var(--custom-background-color),
+      header-background-color: var(--custom-header-background-color),
+      subheader-background-color: var(--custom-subheader-background-color),
+      subheader-toolbar-background-color: var(--custom-subheader-toolbar-background-color),
+      control-panel-background-color: var(--custom-control-panel-background-color),
+      selected-row-background-color: var(--custom-selected-row-background-color),
+      odd-row-background-color: var(--custom-odd-row-background-color),
+      modal-overlay-background-color: var(--custom-modal-overlay-background-color),
+      row-hover-color: var(--custom-row-hover-color),
+      range-selection-border-color: var(--custom-range-selection-border-color),
+      range-selection-background-color: var(--custom-range-selection-background-color),
+      range-selection-background-color-1: var(--custom-range-selection-background-color-1),
+      range-selection-background-color-2: var(--custom-range-selection-background-color-2),
+      range-selection-background-color-3: var(--custom-range-selection-background-color-3),
+      range-selection-background-color-4: var(--custom-range-selection-background-color-4),
+      range-selection-highlight-color: var(--custom-range-selection-highlight-color),
+      selected-tab-underline-color: var(--custom-selected-tab-underline-color),
+      range-selection-chart-category-background-color: var(--custom-range-selection-chart-category-background-color),
+      range-selection-chart-background-color: var(--custom-range-selection-chart-background-color),
+      header-cell-hover-background-color: var(--custom-header-cell-hover-background-color),
+      header-cell-moving-background-color: var(--custom-header-cell-moving-background-color),
+      value-change-value-highlight-background-color: var(--custom-value-change-value-highlight-background-color),
+      value-change-delta-up-color: var(--custom-value-change-delta-up-color),
+      value-change-delta-down-color: var(--custom-value-change-delta-down-color),
+      chip-background-color: var(--custom-chip-background-color),
+      border-color: var(--custom-border-color),
+      secondary-border-color: var(--custom-secondary-border-color),
+      row-border-color: var(--custom-row-border-color),
+      header-column-separator-color: var(--custom-header-column-separator-color),
+      header-column-resize-handle-color: var(--custom-header-column-resize-handle-color),
+      input-border-color: var(--custom-input-border-color),
+      input-disabled-border-color: var(--custom-input-disabled-border-color),
+      input-disabled-background-color: var(--custom-input-disabled-background-color),
+      checkbox-background-color: var(--custom-checkbox-background-color),
+      checkbox-checked-color: var(--custom-checkbox-checked-color),
+      checkbox-unchecked-color: var(--custom-checkbox-unchecked-color),
+      checkbox-indeterminate-color: var(--custom-checkbox-indeterminate-color),
+      toggle-button-off-border-color: var(--custom-toggle-button-off-border-color),
+      toggle-button-off-background-color: var(--custom-toggle-button-off-background-color),
+      toggle-button-on-border-color: var(--custom-toggle-button-on-border-color),
+      toggle-button-on-background-color: var(--custom-toggle-button-on-background-color),
+      toggle-button-switch-background-color: var(--custom-toggle-button-switch-background-color),
+      toggle-button-switch-border-color: var(--custom-toggle-button-switch-border-color),
+      input-focus-border-color: var(--custom-input-focus-border-color),
+      minichart-selected-chart-color: var(--custom-minichart-selected-chart-color),
+      minichart-selected-page-color: var(--custom-minichart-selected-page-color),
+    )
+  );
+}
