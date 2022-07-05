@@ -124,5 +124,8 @@
         }
       }
     }},
-  "defaultProject": "custom-theme"
+  "defaultProject": "custom-theme",
+  "cli": {
+    "analytics": false
+  }
 }

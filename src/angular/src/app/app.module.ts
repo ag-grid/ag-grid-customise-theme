@@ -12,7 +12,7 @@ import 'ag-grid-enterprise';
   ],
   imports: [
     BrowserModule,
-    AgGridModule.withComponents([])
+    AgGridModule
   ],
   providers: [],
   bootstrap: [AppComponent]
