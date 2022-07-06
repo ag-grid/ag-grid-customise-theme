@@ -10,16 +10,14 @@ $icons: aggregation, arrows, asc, cancel, chart,
         small-down, small-left, small-right, small-up, 
         tick, tree-closed, tree-indeterminate, tree-open;
 
-$icon-path: '../resources/icons/';
-
-@mixin icon-background($path, $icon, $size) {
-    background: url('#{$path}#{$icon}.svg') no-repeat;
+@mixin icon-background($icon) {
+    background: url('//localhost:8080/icons/#{$icon}.svg') no-repeat;
     background-color: transparent;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: $size $size;
-    height: $size;
-    width: $size;
+    background-size: contain;
+    height: 16px;
+    width: 16px;
 }
 
 // ag-grid.scss defines structural styles and should be imported first
@@ -47,7 +45,7 @@ $icon-path: '../resources/icons/';
 
   @each $icon in $icons {
     .ag-icon.ag-icon-#{$icon} {
-      @include icon-background($icon-path, $icon, 16px);
+      @include icon-background($icon);
       &:before {
           content: '' !important;
       }
@@ -55,7 +53,7 @@ $icon-path: '../resources/icons/';
   }
 
   .ag-icon.ag-icon-row-drag {
-      @include icon-background($icon-path, 'grip', 16px);
+      @include icon-background('grip');
       &:before {
         content: '' !important;
       }

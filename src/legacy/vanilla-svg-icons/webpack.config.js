@@ -1,4 +1,5 @@
 // config/webpack.dev.js
+const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -30,7 +31,6 @@ module.exports = {
                             sourceMap: true
                         }
                     },
-                    'resolve-url-loader',
                     {
                         loader: 'sass-loader',
                         options: {
@@ -52,5 +52,12 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'index.html'
         })
-    ]
+    ],
+
+    devServer: {
+        static: {
+            directory: path.join(__dirname, 'resources'),
+        }
+    },
+    
 };

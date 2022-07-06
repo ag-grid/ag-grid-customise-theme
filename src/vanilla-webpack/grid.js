@@ -10,7 +10,9 @@ var columnDefs = [{
     filter: true,
     width: 200,
     rowDrag: true
-}].concat('ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(letter => ({ field: letter })));
+}].concat('ABCDEFG'.split('').map(letter => ({ field: letter })));
+
+columnDefs[0].checkboxSelection = true;
 
 // create 100 rows, and fill with random numbers
 var rowData = [];
@@ -30,7 +32,6 @@ for (var i = 0; i < 100; i++) {
 }
 
 var gridOptions = {
-
     // we do not hide the menu icons, so easier to see any style changes that impact the icons
     suppressMenuHide: true,
 
@@ -72,7 +73,8 @@ var gridOptions = {
 
     columnDefs: columnDefs,
     rowData: rowData,
-    enableFillHandle: true
+    enableFillHandle: true,
+    rowSelection: 'multiple'
 };
 
 function initialise() {

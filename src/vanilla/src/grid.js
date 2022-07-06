@@ -71,7 +71,7 @@ var gridOptions = {
     columnDefs: columnDefs,
     rowData: rowData,
     enableFillHandle: true,
-    rowSelection: 'single'
+    rowSelection: 'multiple'
 };
 
 function initialise() {

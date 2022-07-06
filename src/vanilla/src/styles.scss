@@ -1,5 +1,5 @@
 // this import works because the sass compiler is invoked with `--load-path node_modules`
-@use "@ag-grid-community/styles" as ag;
+@use "ag-grid-community/styles" as ag;
 
 @include ag.grid-styles((
   // include multiple theme files and set specific parameters on each
