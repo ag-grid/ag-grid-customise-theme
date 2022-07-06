@@ -10,10 +10,17 @@ export class AppComponent {
 
     columnDefs = (() => {
         var columns = [{
-            headerName: 'Country',
+           headerName: 'Country',
             field: 'country',
             enableRowGroup: true,
+            checkboxSelection: true,
+            headerCheckboxSelection: true,
             filter: true,
+            filterParams: {
+                newRowsAction: 'keep',
+                resetButton: true,
+                applyButton: true
+            },
             width: 200,
             rowDrag: true
         }];
@@ -40,31 +47,30 @@ export class AppComponent {
         return rowData;
     })();
 
-    defaultColDef = {
-        // make all cols more narrow
-        width: 100,
-        filter: 'number',
-        sortable: true,
-        resizable: true
+    autoGroupColumnDef = {
+        resizable: true,
+        cellRendererParams: {
+            checkbox: true
+        }
     }
 
     sideBar = {
         toolPanels: [
-            {
-                id: 'columns',
-                labelDefault: 'Columns',
-                labelKey: 'columns',
-                iconKey: 'columns',
-                toolPanel: 'agColumnsToolPanel',
-            },
-            {
-                id: 'filters',
-                labelDefault: 'Filters',
-                labelKey: 'filters',
-                iconKey: 'filter',
-                toolPanel: 'agFiltersToolPanel',
-            }
+          {
+            id: 'columns',
+            labelDefault: 'Columns',
+            labelKey: 'columns',
+            iconKey: 'columns',
+            toolPanel: 'agColumnsToolPanel',
+          },
+          {
+            id: 'filters',
+            labelDefault: 'Filters',
+            labelKey: 'filters',
+            iconKey: 'filter',
+            toolPanel: 'agFiltersToolPanel',
+          }
         ],
-        defaultToolPanel: null
+      defaultToolPanel: null
     };
 }

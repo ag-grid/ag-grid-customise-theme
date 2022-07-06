@@ -1,0 +1,89 @@
+
+
+// ag-grid.scss defines structural styles and should be imported first
+@import "~ag-grid-community/src/styles/ag-grid.scss";
+@import "~ag-grid-community/src/styles/ag-theme-material/sass/ag-theme-material-mixin.scss";
+
+// Fonts from https://materialdesignicons.com/
+@import "@mdi/font/scss/variables";
+@import "@mdi/font/scss/functions";
+@import "@mdi/font/scss/path";
+@import "@mdi/font/scss/core";
+@import "@mdi/font/scss/icons";
+
+
+.ag-theme-material {
+  @include ag-theme-material((
+    // Use Font Awesome for icons
+    icon-font-family: "Material Design Icons",
+    // The @imports above embed the Material Design data, so set icons-data to null to avoid
+    // the theme's default font from being embedded too
+    icons-data: null,
+    // Map ag-Grid icon names to Material Design Icons character codes
+    icons-font-codes: (
+      "aggregation": "\F02C3",
+      "arrows": "\F0041",
+      "asc": "\F005D",
+      "cancel": "\F0159",
+      "chart": "\F0128",
+      "color-picker": "\F0266",
+      "columns": "\F08DF",
+      "contracted": "\F0375",
+      "copy": "\F018F",
+      "cross": "\F0156",
+      "desc": "\F0045",
+      "expanded": "\F0416",
+      "eye-slash": "\F0209",
+      "eye": "\F0208",
+      "filter": "\F0233",
+      "first": "\F0600",
+      "grip": "\F12F0",
+      "group": "\F0328",
+      "last": "\F0601",
+      "left": "\F004D",
+      "linked": "\F0337",
+      "loading": "\F0772",
+      "maximize": "\F004C",
+      "menu": "\F035C",
+      "minimize": "\F0044",
+      "next": "\F0142",
+      "none": "\F16BB",
+      "not-allowed": "\F073A",
+      "paste": "\F0192",
+      "pin": "\F0403",
+      "pivot": "\F09BB",
+      "previous": "\F0141",
+      "right": "\F0054",
+      "save": "\F0193",
+      "small-down": "\F0140",
+      "small-left": "\F0141",
+      "small-right": "\F0142",
+      "small-up": "\F0143",
+      "tick": "\F012C",
+      "tree-closed": "\F0142",
+      "tree-indeterminate": "\F0374",
+      "tree-open": "\F0140",
+      "unlinked": "\F0338"
+    )
+  ));
+
+  .ag-checkbox-input-wrapper::after {
+    content: "\F012E";
+  }
+
+  .ag-checkbox-input-wrapper.ag-checked::after {
+    content: "\F0132";
+  }
+
+  .ag-checkbox-input-wrapper.ag-indeterminate::after  {
+    content: "\F0856";
+  }
+  
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}

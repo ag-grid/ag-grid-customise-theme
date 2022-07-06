@@ -1,0 +1,48 @@
+// This import works because sass-loader treats the `~` character as in
+// instruction to look within node_modules
+@use "~ag-grid-community/styles" as ag;
+
+@include ag.grid-styles((
+  // include multiple theme files and set specific parameters on each
+  themes: (
+    custom: (
+      extend-theme: alpine,
+      --ag-header-background-color: rgb(234, 191, 177),
+    ),
+    custom-dark: (
+      extend-theme: alpine-dark,
+      --ag-header-background-color: rgb(72, 44, 17),
+      // just to mix things up, let's give the dark theme a different icon set
+      --ag-icon-font-family: "agGridMaterial",
+    )
+  ),
+
+  // setting properties here will apply to all themes
+  --ag-header-height: 80px,
+
+  // setting the active color will use color blending to update various
+  // other colors eg. the row hover color will be set to a light pink
+  --ag-alpine-active-color: red,
+
+  // Uncomment this to remove all native widget styling from the grid. This is
+  // useful if you want to make your own styles starting from a blank slate.
+  // suppress-native-widget-styling: "true"
+));
+
+// More kinds of customisation can be made with CSS rules
+.ag-header-cell {
+  font-style: italic;
+}
+.ag-theme-custom .ag-group-title-bar {
+  background-color: #defade;
+}
+.ag-theme-custom-dark .ag-group-title-bar {
+  background-color: #0f630f;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}

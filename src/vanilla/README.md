@@ -1,8 +1,9 @@
-# ag-Grid Theme Webpack Example
+# ag-Grid Sass Styling API Example
 
-<p>This project demonstrates how to create a custom theme in an JS / Webpack project.</p>
+<p>This project demonstrates the Sass styling API using the Sass command line tool to compile Sass to CSS.</p>
 
 ## Usage
 
 - Run `npm install && npm start`
-- View the project in your browser at [http://localhost:8080/](http://localhost:8080/)
+- The project should automatically open in your browser. If it does not, look at the console messages to find the URL.
+- Open `styles.scss`. There are optional sections that you can try uncommenting to try different features of the API.
