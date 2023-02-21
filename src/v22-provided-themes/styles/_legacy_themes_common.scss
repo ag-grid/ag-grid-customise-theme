@@ -1,0 +1,188 @@
+@use "ag-grid-community/styles" as ag;
+@use "ag-grid-community/styles/agGridClassicFont";
+
+@include ag.grid-styles((
+  // include multiple theme files and set specific parameters on each
+  themes: (
+    'blue': (
+      extend-theme: balham,
+      --ag-foreground-color: #222,
+      --ag-background-color: #fff,
+      --ag-header-background-color: #5e9cd3,
+      --ag-odd-row-background-color: #deebf7,
+      --ag-input-disabled-background-color: #dedede,
+      --ag-borders: 1px solid,
+      --ag-border-color: #9bc2e6,
+      --ag-cell-horizontal-border: dotted #9bc2e6,
+      --ag-header-cell-moving-background-color: #9bc2e6,
+      --ag-header-foreground-color: #FFF,
+      --ag-chip-background-color: #ddebf7,
+      --ag-control-panel-background-color: #f6f6f6,
+      --ag-range-selection-highlight-color: rgba(#8F8, 0.4),
+      --ag-value-change-delta-up-color: darkgreen,
+      --ag-value-change-delta-down-color: darkred,
+      --ag-value-change-value-highlight-background-color: #cec,
+      --ag-input-border-color: #000,
+      --ag-header-column-separator-display: block,
+      --ag-row-border-color: null,
+      --ag-subheader-background-color: #ececec,
+      --ag-row-hover-color: #f0f0f0,
+      --ag-selected-row-background-color: #c7c7c7,
+    ),
+    bootstrap: (
+      extend-theme: balham,
+      --ag-borders: false,
+      --ag-foreground-color: #000,
+      --ag-background-color: #FFF,
+      --ag-header-background-color: #FFF,
+      --ag-odd-row-background-color: #f6f6f6,
+      --ag-input-disabled-background-color: #ebebeb,
+      --ag-border-color: darkgrey,
+      --ag-chip-background-color: #ecf0f1,
+      --ag-header-cell-moving-background-color: #bebebe,
+      --ag-control-panel-background-color: #f6f6f6,
+      --ag-range-selection-highlight-color: rgba(#8F8, 0.4),
+      --ag-value-change-delta-up-color: darkgreen,
+      --ag-value-change-delta-down-color: darkred,
+      --ag-value-change-value-highlight-background-color: #cec,
+      --ag-input-border-color: #000,
+      --ag-row-border-color: null,
+      --ag-subheader-background-color: #ececec,
+      --ag-selected-row-background-color: #bde2e5
+    ),
+    dark: (
+      extend-theme: balham,
+      --ag-foreground-color: #ccc,
+      --ag-background-color: #302e2e,
+      --ag-header-background-color: #626262,
+      --ag-disabled-foreground-color: rgba(228, 228, 228, 0.5),
+      --ag-odd-row-background-color: #403e3e,
+      --ag-row-hover-color: #302e2e,
+      --ag-input-disabled-background-color: rgba(48, 46, 46, 0.3),
+      --ag-border-color: darkgrey,
+      --ag-cell-horizontal-border: dotted grey,
+      --ag-header-cell-moving-background-color: #bebebe,
+      --ag-control-panel-background-color: rgb(48, 46, 46),
+      --ag-subheader-background-color: #201f1f,
+      --ag-chip-background-color: rgb(64, 62, 62),
+      --ag-range-selection-background-color: rgba(100, 160, 160, 0.4),
+      --ag-range-selection-highlight-color: rgba(255, 255, 255, 0.4),
+      --ag-value-change-delta-up-color: greenyellow,
+      --ag-value-change-delta-down-color: red,
+      --ag-value-change-value-highlight-background-color: chocolate,
+      --ag-input-border-color: #000,
+      --ag-header-column-separator-display: block,
+      --ag-row-border-color: null,
+      --ag-selected-row-background-color: #4a708b
+    ),
+    fresh: (
+      extend-theme: balham,
+      --ag-header-background-color: #e6e6e6,
+      --ag-odd-row-background-color: #f6f6f6,
+      --ag-input-disabled-background-color: #ebebeb,
+      --ag-borders: 1px solid,
+      --ag-cell-horizontal-border: dotted darkgrey,
+      --ag-header-cell-moving-background-color: #bebebe,
+      --ag-control-panel-background-color: #f6f6f6,
+      --ag-range-selection-highlight-color: #88FF884a,
+      --ag-value-change-delta-up-color: darkgreen,
+      --ag-value-change-delta-down-color: darkred,
+      --ag-value-change-value-highlight-background-color: #cec,
+      --ag-input-border-color: #000,
+      --ag-header-column-separator-display: block,
+      --ag-row-border-color: null,
+      --ag-selected-row-background-color: #bde2e5,
+      --ag-subheader-background-color: #ececec,
+      --ag-row-hover-color: null,
+    ),
+    
+
+  ),
+  --ag-icon-font-family: agGridClassic,
+  --ag-grid-size: 4px,
+  --ag-icon-size: 12px,
+  --ag-side-bar-panel-width: 200px,
+  --ag-border-radius: 0px,
+  --ag-header-column-separator-height: 100%,
+  --ag-header-column-separator-width: 1px,
+  --ag-header-column-resize-handle-height: 50%,
+  --ag-header-column-resize-handle-width: 1px,
+  --ag-filter-tool-panel-group-indent: 16px,
+  --ag-font-size: 14px,
+  --ag-disabled-foreground-color: rgba(0,0,0,.5),
+  --ag-modal-overlay-background-color: rgba(255, 255, 255, 0.5),
+  --ag-range-selection-background-color: rgba(0, 0, 0, 0.2),
+  --ag-range-selection-background-color-2: rgba(0, 0, 0, 0.25),
+  --ag-range-selection-background-color-3: rgba(0, 0, 0, 0.3),
+  --ag-range-selection-background-color-4: rgba(0, 0, 0, 0.35),
+  --ag-popup-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3),
+  --ag-font-family: ("Helvetica Neue", sans-serif),
+  --ag-subheader-toolbar-background-color: null,
+  --ag-column-hover-color: null,
+  --ag-selected-tab-underline-transition-speed: 0s,
+  --ag-selected-tab-underline-width: 0,
+  --ag-range-selection-chart-category-background-color: #00ff841a,
+  --ag-range-selection-chart-background-color: #0058FF1a,
+  --ag-header-column-separator-color: #BFBFBF5a,
+  --ag-header-column-resize-handle-color: #BFBFBF5a,
+  --ag-input-disabled-border-color: #0000003a,
+  --ag-checkbox-background-color: null,
+  --ag-input-focus-box-shadow: null,
+  --ag-input-focus-border-color: null,
+  --ag-header-cell-hover-background-color: null,
+  --ag-card-shadow: none,
+));
+
+/* derived variables */
+.ag-theme-blue,
+.ag-theme-bootstrap,
+.ag-theme-classic,
+.ag-theme-dark,
+.ag-theme-fresh {
+  --ag-data-color: var(--ag-foreground-color);
+  --ag-secondary-foreground-color: var(--ag-foreground-color);
+  --ag-range-selection-border-color: var(--ag-foreground-color);
+  --ag-selected-tab-underline-color: var(--ag-range-selection-border-color);
+  --ag-header-cell-moving-background-color: var(--ag-header-cell-hover-background-color);
+
+  --ag-borders-critical: var(--ag-borders);
+  --ag-borders-secondary: var(--ag-borders);
+  --ag-borders-side-button: var(--ag-borders);  
+
+  --ag-secondary-border-color: var(--ag-border-color);
+
+  --ag-checkbox-border-radius: var(--ag-border-radius);
+  --ag-checkbox-checked-color: var(--ag-foreground-color);
+  --ag-checkbox-unchecked-color: var(--ag-foreground-color);
+  --ag-checkbox-indeterminate-color: var(--ag-checkbox-unchecked-color);
+
+  --ag-toggle-button-off-border-color: var(--ag-checkbox-unchecked-color);
+  --ag-toggle-button-off-background-color: var(--ag-checkbox-unchecked-color);
+  --ag-toggle-button-on-border-color: var(--ag-checkbox-checked-color);
+  --ag-toggle-button-on-background-color: var(--ag-checkbox-checked-color);
+  --ag-toggle-button-switch-background-color: var(--ag-background-color);
+  --ag-toggle-button-switch-border-color: var(--ag-toggle-button-off-border-color);
+  --ag-toggle-button-border-width: 1px;
+  --ag-toggle-button-height: var(--ag-icon-size);
+  --ag-toggle-button-width: calc(var(--ag-toggle-button-height) * 2);
+
+  --ag-minichart-selected-chart-color: var(--ag-checkbox-checked-color);
+  --ag-minichart-selected-page-color: var(--ag-checkbox-checked-color);
+
+  --ag-widget-container-horizontal-padding: calc(var(--ag-grid-size) * 1.5);
+  --ag-widget-container-vertical-padding: calc(var(--ag-grid-size) * 1.5);
+  --ag-widget-horizontal-spacing: calc(var(--ag-grid-size) * 1.5);
+  --ag-widget-vertical-spacing: var(--ag-grid-size);
+
+  --ag-cell-horizontal-padding: calc(var(--ag-grid-size) * 3);
+  --ag-cell-widget-spacing: var(--ag-cell-horizontal-padding);
+
+  --ag-row-height: calc(var(--ag-grid-size) * 6 + 1px);
+  --ag-header-height: var(--ag-row-height);
+  --ag-list-item-height: calc(var(--ag-grid-size) * 5);;
+  --ag-column-select-indent-size: calc(var(--ag-grid-size) + var(--ag-icon-size));
+  --ag-row-group-indent-size: calc(var(--ag-cell-widget-spacing) + var(--ag-icon-size));
+
+  --ag-card-radius: var(--ag-border-radius);
+}
+

@@ -1,0 +1,93 @@
+// This file recreates the old "dark" theme that was removed in v23, and re-implements it as a custom
+// theme extending ag-theme-base.
+
+// ag-grid.scss defines structural styles and should be imported first
+@use "./legacy_themes_common";
+
+.ag-theme-dark {
+  .ag-icon {
+    color: #d6d5d5;
+  }
+
+  .ag-icon-tree-closed::before {
+    content: var(--ag-icon-font-code-contracted, "\f10b");
+  }
+  
+  .ag-icon-tree-open::before {
+    content: var(--ag-icon-font-code-expanded, "\f112");
+  }
+
+  .ag-tab {
+    border: 1px solid transparent;
+    padding: var(--ag-grid-size) calc(var(--ag-grid-size) * 2);
+    margin: var(--ag-grid-size);
+    margin-bottom: -1px; // shift down 1px to make tab background blend with area below
+  }
+
+  .ag-tabs-body {
+    margin: calc(var(--ag-grid-size) * 0.5) 0;
+  }
+
+  .ag-icon {
+    margin: 1px 1px 2px 1px;
+  }
+
+  .ag-tab-selected {
+      background-color: var(--ag-background-color);
+      border-color: var(--ag-border-color);
+      border-bottom-color: transparent;
+  }
+
+  .ag-tabs-header {
+      background-color: var(--ag-header-background-color);
+      border-bottom: 1px solid var(--ag-border-color);
+  }
+
+  .ag-filter .ag-filter-apply-panel {
+    justify-content: flex-start;
+  }
+
+  .ag-menu-option-active {
+    background-color: var(--ag-selected-row-background-color);
+  }
+
+  .ag-header-row,
+  .ag-filter-toolpanel-header,
+  .ag-column-drop-vertical-empty-message {
+    font-weight: normal;
+  }
+
+  .ag-column-drop-cell {
+    border: 1px solid var(--ag-border-color);
+    border-radius: 0;
+  }
+
+  .ag-column-drop-cell-button .ag-icon {
+    border: 1px solid transparent;
+  }
+
+  .ag-column-drop-cell-button:hover .ag-icon {
+    border-color: var(--ag-border-color);
+  }
+
+  .ag-panel-title-bar-button-icon {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .ag-menu-option-part {
+      padding-top: var(--ag-grid-size);
+      padding-bottom: var(--ag-grid-size);
+  }
+
+  .ag-column-drop-vertical-title-bar {
+    margin-top: var(--ag-grid-size);
+    margin-left: var(--ag-grid-size);
+  }
+  .ag-column-drop-vertical-title {
+    margin-left: var(--ag-grid-size);
+  }
+  .ag-column-drop-vertical-empty-message {
+    margin-left: calc(var(--ag-grid-size) * 3) + var(--ag-icon-size)
+  }
+}
