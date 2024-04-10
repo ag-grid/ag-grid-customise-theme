@@ -7,7 +7,6 @@
   "license": "ISC",
   "dependencies": {
     "ag-grid-community": "31.2.1",
-    "@ag-grid-community/styles": "31.2.1",
     "ag-grid-enterprise": "31.2.1",
     "@fortawesome/fontawesome-free": "5.15.4",
     "sass": "1.45.2",
