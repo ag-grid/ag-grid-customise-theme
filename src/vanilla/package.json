@@ -1,22 +1,20 @@
 {
-    "name": "custom-ag",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "start": "npm run sass:build; npm-run-all --parallel sass:watch serve",
-        "sass:build": "sass --load-path node_modules src/styles.scss:src/styles-compiled.css",
-        "sass:watch": "npm run sass:build -- --watch",
-        "serve": "live-server src --mount=/node_modules:node_modules"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "@fortawesome/fontawesome-free": "^6.1.1",
-        "ag-grid-community": "latest",
-        "ag-grid-enterprise": "latest",
-        "live-server": "^1.2.2",
-        "npm-run-all": "^4.1.5",
-        "sass": "^1.51.0"
-    }
+  "private": true,
+  "scripts": {
+    "start": "npm run sass:build; npm-run-all --parallel sass:watch serve",
+    "sass:build": "sass --load-path node_modules src/styles.scss:src/styles-compiled.css",
+    "sass:watch": "npm run sass:build -- --watch",
+    "serve": "live-server src --mount=/node_modules:node_modules"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.1.1",
+    "ag-grid-community": "31.2.1",
+    "@ag-grid-community/styles": "31.2.1",
+    "ag-grid-enterprise": "31.2.1",
+    "live-server": "^1.2.2",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.51.0"
+  }
 }

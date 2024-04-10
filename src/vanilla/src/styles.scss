@@ -1,44 +1,24 @@
 // this import works because the sass compiler is invoked with `--load-path node_modules`
 @use "ag-grid-community/styles" as ag;
 
-@include ag.grid-styles((
-  // include multiple theme files and set specific parameters on each
-  themes: (
-    custom: (
-      extend-theme: alpine,
-      --ag-header-background-color: rgb(234, 191, 177),
+
+@include ag.grid-styles(
+  (
+    themes: (
+      custom-dark: (
+        extend-theme: quartz-dark,
+        odd-row-background-color: rgb(66, 53, 53),
+      ),
+      custom: (
+        extend-theme: quartz,
+        odd-row-background-color: rgb(255, 211, 211),
+      ),
     ),
-    custom-dark: (
-      extend-theme: alpine-dark,
-      --ag-header-background-color: rgb(72, 44, 17),
-      // just to mix things up, let's give the dark theme a different icon set
-      --ag-icon-font-family: "agGridMaterial",
-    )
-  ),
+    active-color: #ff0088,
+    border-radius: 12px,
+  )
+);
 
-  // setting properties here will apply to all themes
-  --ag-header-height: 80px,
-
-  // Some colors are automatically generated from others, for example setting
-  // the selection border color automatically set the selection background color
-  // will be set to a light pink
-  --ag-range-selection-border-color: red,
-
-  // Uncomment this to remove all native widget styling from the grid. This is
-  // useful if you want to make your own styles starting from a blank slate.
-  // suppress-native-widget-styling: "true"
-));
-
-// More kinds of customisation can be made with CSS rules
-.ag-header-cell {
-  font-style: italic;
-}
-.ag-theme-custom .ag-group-title-bar {
-  background-color: #defade;
-}
-.ag-theme-custom-dark .ag-group-title-bar {
-  background-color: #0f630f;
-}
 
 html,
 body {
@@ -46,3 +26,4 @@ body {
   padding: 0;
   height: 100%;
 }
+

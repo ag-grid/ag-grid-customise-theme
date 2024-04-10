@@ -6,11 +6,11 @@
   // include multiple theme files and set specific parameters on each
   themes: (
     custom: (
-      extend-theme: alpine,
+      extend-theme: quartz,
       --ag-header-background-color: rgb(234, 191, 177),
     ),
     custom-dark: (
-      extend-theme: alpine-dark,
+      extend-theme: quartz-dark,
       --ag-header-background-color: rgb(72, 44, 17),
       // just to mix things up, let's give the dark theme a different icon set
       --ag-icon-font-family: "agGridMaterial",

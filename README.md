@@ -7,6 +7,7 @@ An up-to-date table with the variable default values and their function is avail
 ## Usage
 
 - Clone the project
+- (optional) to set a specific grid version across all demo projects, run: `node set-version.js VERSION` where VERSION is a semver string e.g. 32.2.1
 - Choose a project:
   - `src/vanilla`: using the Sass API through the command line Sass compiler
   - `src/vanilla-webpack`: using the Sass API through the Webpack and sass-loader

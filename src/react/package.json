@@ -1,21 +1,19 @@
 {
-  "name": "custom-theme",
-  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.7.0",
     "@testing-library/react": "^10.0.4",
     "@testing-library/user-event": "^10.2.4",
-    "ag-grid-community": "latest",
-    "ag-grid-enterprise": "latest",
-    "ag-grid-react": "latest",
-    "sass": "1.40.1",
+    "ag-grid-community": "31.2.1",
+    "ag-grid-enterprise": "31.2.1",
+    "ag-grid-react": "31.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "sass": "1.40.1"
   },
   "scripts": {
-    "start": "PORT=8080 react-scripts start",
+    "start": "PORT=8080 NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

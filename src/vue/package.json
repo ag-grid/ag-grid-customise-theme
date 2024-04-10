@@ -1,6 +1,4 @@
 {
-  "name": "custom-vue",
-  "version": "0.1.0",
   "private": true,
   "scripts": {
     "start": "vue-cli-service serve --open --port 8080",
@@ -8,19 +6,19 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "ag-grid-community": "latest",
-    "ag-grid-enterprise": "latest",
-    "ag-grid-vue": "latest",
+    "ag-grid-community": "31.2.1",
+    "ag-grid-enterprise": "31.2.1",
+    "ag-grid-vue": "31.2.1",
     "core-js": "3.17.3",
     "vue": "2.6.14",
     "vue-property-decorator": "^8.4.2"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "4.5.13",
-    "@vue/cli-service": "4.5.13",
-    "sass": "1.40.1",
-    "sass-loader": "10.2.0",
-    "vue-template-compiler": "2.6.14",
-    "webpack": "5.52.1"
+    "@vue/cli-plugin-babel": "^5.0.8",
+    "@vue/cli-service": "^5.0.8",
+    "sass": "^1.74.1",
+    "sass-loader": "^14.1.1",
+    "vue-template-compiler": "^2.7.16",
+    "webpack": "^5.91.0"
   }
 }

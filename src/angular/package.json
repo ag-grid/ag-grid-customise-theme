@@ -1,4 +1,5 @@
 {
+  "private": true,
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port=8080 --open",
@@ -7,7 +8,6 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "14.0.4",
     "@angular/common": "14.0.4",
@@ -17,9 +17,9 @@
     "@angular/platform-browser": "14.0.4",
     "@angular/platform-browser-dynamic": "14.0.4",
     "@angular/router": "14.0.4",
-    "ag-grid-angular": "latest",
-    "ag-grid-community": "latest",
-    "ag-grid-enterprise": "latest",
+    "ag-grid-angular": "31.2.1",
+    "ag-grid-community": "31.2.1",
+    "ag-grid-enterprise": "31.2.1",
     "rxjs": "7.5.1",
     "tslib": "^2.3.1",
     "zone.js": "0.11.4"
