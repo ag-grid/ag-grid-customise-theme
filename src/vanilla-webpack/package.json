@@ -1,13 +1,14 @@
 {
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open",
+    "postinstall": "node ../../delete-package-lock.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ag-grid-community": "31.2.1",
-    "ag-grid-enterprise": "31.2.1",
+    "ag-grid-community": "latest",
+    "ag-grid-enterprise": "latest",
     "@fortawesome/fontawesome-free": "5.15.4",
     "sass": "1.45.2",
     "sass-loader": "12.4.0",

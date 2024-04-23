@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="ag-grid-theme-builder.css">
+        <script>
+            function setDarkMode(on) {
+                if (on) {
+                    document.body.classList.add("dark");
+                    document.getElementById("myGrid").className = "ag-theme-custom-dark";
+                } else {
+                    document.body.classList.remove("dark");
+                    document.getElementById("myGrid").className = "ag-theme-custom";
+                }
+            }
+        </script>
+        <style>
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+            }
+
+            #myGrid {
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="myGrid"></div>
+        <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
+        <script src="https://unpkg.com/ag-grid-enterprise/dist/ag-grid-enterprise.min.noStyle.js"></script>
+        <script src="grid.js"></script>
+    </body>
+</html>

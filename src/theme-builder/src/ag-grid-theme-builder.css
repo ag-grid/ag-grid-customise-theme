@@ -1,0 +1,15 @@
+
+/*
+This project is for testing the exported CSS of the AG Grid Theme Builder.
+
+Export a CSS file from the Theme Builder and replace the content of this file with it.
+*/
+
+
+body::before {
+    display: block;
+    font-size: 40px;
+    max-width: 800px;
+    margin: 50px;
+    content: "To test a Theme Builder export, replace the content of the file ag-grid-theme-builder.css with the CSS exported from the Theme Builder";
+}

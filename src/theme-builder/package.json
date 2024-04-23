@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "live-server src --mount=/node_modules:node_modules",
+    "postinstall": "node ../../delete-package-lock.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ag-grid-community": "latest",
+    "ag-grid-enterprise": "latest",
+    "live-server": "^1.2.2"
+  }
+}
